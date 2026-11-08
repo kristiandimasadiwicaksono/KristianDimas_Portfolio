@@ -144,19 +144,19 @@ export const content = {
   },
   aiWorkflow: {
     lead:
-      'Aku memakai OpenCode sebagai AI coding assistant untuk menjaga alur kerja tetap terukur: konteks proyek disiapkan dulu, instruksi ditulis eksplisit, dan hasilnya selalu ditinjau ulang sebelum dipakai.',
+      'Memanfaatkan OpenCode untuk membantu proses penulisan dan pengembangan kode serta melakukan pengecekan terhadap hasilnya.',
     points: [
       {
-        title: 'Konteks & rencana',
-        desc: 'Kebutuhan fitur dijelaskan lebih dulu, lalu dipecah menjadi langkah kecil yang dapat dikerjakan berurutan.',
+        title: 'Perencanaan',
+        desc: 'Menentukan kebutuhan fitur dan menyusun tahapan pengerjaan agar proses pengembangan lebih terarah.',
       },
       {
-        title: 'Eksekusi terarah',
-        desc: 'Kode ditulis mengikuti standar proyek yang sudah ada: TypeScript, konvensi folder, dan gaya penulisan yang konsisten.',
+        title: 'Pengembangan',
+        desc: 'Mengembangkan kode dengan mengikuti struktur folder, standar penulisan, dan teknologi yang digunakan dalam proyek.',
       },
       {
-        title: 'Review & uji',
-        desc: 'Setiap perubahan dicek lewat typecheck, build, dan pengujian visual di browser sebelum menjadi bagian dari hasil akhir.',
+        title: 'Pemeriksaan',
+        desc: 'Memeriksa hasil pengembangan melalui typecheck, build, dan pengujian langsung di browser untuk memastikan fitur berjalan dengan baik.',
       },
     ],
   },
