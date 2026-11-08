@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-funnel: 'Funnel Display', sans-serif;
+}
+
+/* Bricolage = display, Figtree = body (sesuai Design.md) */
+:root {
+  --font-base: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --bg: #E8EEF0;
+  --surface: #F7F8F7;
+  --ink: #1D2930;
+  --ink-soft: #52636A;
+  --line: #CDD7D9;
+  --accent: #A84F22;
+  --accent-2: #8F421D;
+  --accent-ink: #FFFFFF;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'],
+:root.dark {
+  --bg: #141D24;
+  --surface: #1D2931;
+  --ink: #F2EEE7;
+  --ink-soft: #AEB9BA;
+  --line: #35444A;
+  --accent: #F0A45B;
+  --accent-2: #FFC27D;
+  --accent-ink: #172027;
+  color-scheme: dark;
+}
+
+html {
+  font-optical-sizing: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-base);
+  line-height: 1.65;
+  min-height: 100dvh;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-wrap: pretty;
+}
+
+p, li, dd {
+  max-width: 65ch;
+  line-height: 1.65;
+}
+
+.num-tabular, time, .tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Layout & tipografi fluid */
+.container-x {
+  margin-inline: auto;
+  max-width: 1320px;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+/* Shared vertical rhythm for standard sections. */
+.section-y { padding-block: clamp(3rem, 7vw, 6rem); }
+
+.h-display {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 80, 'wght' 700;
+  font-weight: 700;
+  font-size: clamp(2.75rem, 10vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.h-section {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.h-contact {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 80, 'wght' 700;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+/* Hanya hover di perangkat yang benar-benar punya hover (bukan layar sentuh) */
+@media (hover: none) {
+  .hover-only { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
