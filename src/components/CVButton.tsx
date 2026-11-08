@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const CV_URL = `${import.meta.env.BASE_URL}cv/CV.pdf`;
+const CV_URL = `${import.meta.env.BASE_URL}cv/Kristian Dimas Adi Wicaksono-resume.pdf`;
 
 /**
  * Cek keberadaan CV satu kali saja untuk semua tombol di halaman.
@@ -103,7 +103,7 @@ export default function CVButton({
   return (
     <a
       href={CV_URL}
-      download="CV-Kristian-Dimas-Adi-Wicaksono.pdf"
+      download="Kristian Dimas Adi Wicaksono-resume.pdf"
       className={`${base} ${SIZES[size]} ${v} hover:-translate-y-0.5 hover:shadow-[0_8px_22px_color-mix(in_srgb,var(--accent)_24%,transparent)] active:translate-y-0 active:shadow-none ${className}`}
       aria-label="Unduh CV dalam format PDF"
     >

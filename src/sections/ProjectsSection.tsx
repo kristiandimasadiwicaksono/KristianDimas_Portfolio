@@ -152,11 +152,11 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
         role="button"
         tabIndex={0}
         aria-label={`Detail ${project.title}`}
-        className={`group flex h-full min-h-[320px] cursor-pointer flex-col rounded-2xl bg-[var(--surface)] transition-colors duration-300 hover:bg-[color-mix(in_srgb,var(--accent)_5%,var(--surface))] md:min-h-[min(420px,58svh)] md:flex-row md:gap-10 md:p-10 ${FOCUS}`}
+        className={`group flex h-full min-h-[320px] cursor-pointer flex-col rounded-2xl bg-[var(--surface)] p-5 transition-colors duration-300 hover:bg-[color-mix(in_srgb,var(--accent)_5%,var(--surface))] md:min-h-[min(420px,58svh)] md:flex-row md:gap-10 md:p-10 ${FOCUS}`}
       >
         <div
           aria-hidden="true"
-          className="mb-6 h-32 w-full shrink-0 rounded-lg bg-[color-mix(in_srgb,var(--line)_55%,transparent)] opacity-60 md:mb-0 md:h-auto md:w-[38%]"
+          className="mb-5 h-20 w-full shrink-0 rounded-lg bg-[color-mix(in_srgb,var(--line)_55%,transparent)] opacity-60 md:mb-0 md:h-auto md:w-[38%]"
         />
         <div className="flex flex-1 flex-col justify-between">
           <div>
